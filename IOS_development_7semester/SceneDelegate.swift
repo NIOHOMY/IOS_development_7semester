@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  IOS_development_7semester
-//
-//  Created by Nio Homy on 24.09.2024.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
