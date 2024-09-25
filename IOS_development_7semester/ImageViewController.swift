@@ -53,16 +53,6 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         imageView.transform = imageView.transform.scaledBy(x: gesture.scale, y: gesture.scale)
         gesture.scale = 1.0
     }
-
-    @objc func handleSwipe(_ gesture: UISwipeGestureRecognizer) {
-        let currentOffset = scrollView.contentOffset.x
-        let width = scrollView.bounds.width
-        if gesture.direction == .left {
-            scrollView.setContentOffset(CGPoint(x: currentOffset + width, y: 0), animated: true)
-        } else if gesture.direction == .right {
-            scrollView.setContentOffset(CGPoint(x: currentOffset - width, y: 0), animated: true)
-        }
-    }
     
     private func setupUIPinchGestureRecognizers() {
         let pinchGesture1 = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch(_:)))
