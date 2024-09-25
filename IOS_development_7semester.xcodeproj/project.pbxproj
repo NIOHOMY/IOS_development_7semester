@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4944F55B2CA3EA57001E292C /* pigeon2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4944F55A2CA3EA57001E292C /* pigeon2.jpg */; };
 		494A4F932CA31F7500895DB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494A4F922CA31F7500895DB6 /* AppDelegate.swift */; };
 		494A4F952CA31F7500895DB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494A4F942CA31F7500895DB6 /* SceneDelegate.swift */; };
 		494A4F9A2CA31F7500895DB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494A4F982CA31F7500895DB6 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4944F55A2CA3EA57001E292C /* pigeon2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pigeon2.jpg; sourceTree = "<group>"; };
 		494A4F8F2CA31F7500895DB6 /* IOS_development_7semester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOS_development_7semester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		494A4F922CA31F7500895DB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		494A4F942CA31F7500895DB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		494A4F912CA31F7500895DB6 /* IOS_development_7semester */ = {
 			isa = PBXGroup;
 			children = (
+				4944F55A2CA3EA57001E292C /* pigeon2.jpg */,
 				494A4FB52CA332C900895DB6 /* pigeon.jpg */,
 				494A4FA72CA320A100895DB6 /* Supporting Files */,
 				494A4F942CA31F7500895DB6 /* SceneDelegate.swift */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				494A4FB62CA332C900895DB6 /* pigeon.jpg in Resources */,
+				4944F55B2CA3EA57001E292C /* pigeon2.jpg in Resources */,
 				494A4F9F2CA31F7800895DB6 /* LaunchScreen.storyboard in Resources */,
 				494A4F9C2CA31F7800895DB6 /* Assets.xcassets in Resources */,
 				494A4F9A2CA31F7500895DB6 /* Main.storyboard in Resources */,
