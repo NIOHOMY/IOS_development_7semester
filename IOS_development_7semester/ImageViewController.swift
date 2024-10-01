@@ -67,5 +67,15 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
             }
         }
     }
+
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let sourceVC = segue.source as? ImageChooserViewController {
+            if let selectedURL = sourceVC.selectedImageURL {
+                imageURL = selectedURL
+            }
+        }
+    }
+
     
 }
