@@ -1,4 +1,5 @@
 import UIKit
+import Alamofire
 
 class ImageViewController: UIViewController, UIScrollViewDelegate {
     
@@ -43,10 +44,7 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         if imageURL == nil {
-            imageURL = Bundle.main.url(
-                forResource: "pigeon",
-                withExtension: "jpg"
-            )
+            imageURL = URL(string: "https://media.istockphoto.com/id/506470828/photo/taking-picture.jpg?s=170667a&w=0&k=20&c=MWyWduuMfAXmqG7SBDco0Q-Gl1tEHS7_DupqyqmvEKE=")
         }
     }
     
@@ -54,11 +52,18 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         return imageView
     }
     
-    private func fetchImage() {
-        if let url = imageURL {
-            let urlContents = try? Data(contentsOf: url)
-            if let imageData = urlContents {
-                img = UIImage(data: imageData)
+    func fetchImage() {
+        guard let imageUrl = imageURL else { return }
+            
+        AF.request(imageUrl).responseData { response in
+            switch response.result {
+            case .success(let data):
+                if let image = UIImage(data: data) {
+                    self.img = image
+                }
+                
+            case .failure(let error):
+                print("Error loading image: \(error)")
             }
         }
     }
