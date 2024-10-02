@@ -15,7 +15,6 @@ class ImageChooserViewController: UIViewController {
         selectedImageURL = imageURLs[selectedIdentifier]
         
         performSegue(withIdentifier: "unwindToImageViewController", sender: self)
-        navigationController?.pushViewController(imageViewController, animated: true)
     }
 
 }
