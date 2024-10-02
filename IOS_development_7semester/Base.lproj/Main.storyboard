@@ -54,8 +54,8 @@
                                     <color key="titleShadowColor" red="0.57859861040000005" green="0.24876717109999999" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="chooseImageButtonTapped:" destination="IFG-K5-uCM" eventType="touchUpInside" id="ekA-PJ-ENU"/>
-                                    <segue destination="1bE-iH-2TX" kind="showDetail" identifier="unwindToImageViewController" id="O4i-gY-Mnu"/>
+                                    <action selector="chooseImageButtonTapped:" destination="IFG-K5-uCM" eventType="touchUpInside" id="OM9-u8-TAz"/>
+                                    <segue destination="1bE-iH-2TX" kind="show" identifier="unwindToImageViewController" id="grH-JP-Cky"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -98,6 +98,7 @@
                             <constraint firstItem="MMS-rf-wFo" firstAttribute="top" secondItem="JDy-dh-F2B" secondAttribute="top" constant="100" id="sYb-yv-0Ex"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="2m3-i6-odR"/>
                     <connections>
                         <outlet property="scrollView" destination="MMS-rf-wFo" id="acw-G2-I2F"/>
                     </connections>
@@ -108,7 +109,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="O4i-gY-Mnu"/>
+        <segue reference="grH-JP-Cky"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
