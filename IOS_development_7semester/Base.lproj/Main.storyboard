@@ -16,33 +16,107 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="showImage" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RL8-hf-YIA">
-                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.4033968517" colorSpace="custom" customColorSpace="sRGB"/>
-                                <accessibility key="accessibilityConfiguration" identifier="showImage"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" red="0.57859861040000005" green="0.24876717109999999" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="ChooseBtnTapped:" destination="IFG-K5-uCM" eventType="touchUpInside" id="xON-FS-Oyl"/>
-                                    <segue destination="1bE-iH-2TX" kind="show" identifier="unwindToImageViewController" id="31L-3c-PrA"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="top" axis="vertical" distribution="equalSpacing" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="OTG-xJ-aFX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="340"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="center" horizontalCompressionResistancePriority="200" verticalCompressionResistancePriority="200" restorationIdentifier="showImage1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RL8-hf-YIA">
+                                        <rect key="frame" x="48.5" y="0.0" width="317" height="100"/>
+                                        <color key="backgroundColor" systemColor="separatorColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="showImage"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="BMZ-gb-46T"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="ejq-UY-asg"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.57859861040000005" green="0.24876717109999999" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Загрузить картинку 1">
+                                                    <attributes>
+                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <font key="NSFont" metaFont="system" size="33"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ChooseBtnOneTapped:" destination="IFG-K5-uCM" eventType="touchUpInside" id="j2I-QJ-4pY"/>
+                                            <segue destination="1bE-iH-2TX" kind="show" identifier="image1" id="Q4w-fx-sy9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="center" horizontalCompressionResistancePriority="200" verticalCompressionResistancePriority="200" restorationIdentifier="showImage2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E9J-BS-r7D">
+                                        <rect key="frame" x="46.5" y="120" width="321" height="100"/>
+                                        <color key="backgroundColor" systemColor="separatorColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="showImage"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="eMY-I2-dpQ"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="olf-T6-tEB"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.57859861040000005" green="0.24876717109999999" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Загрузить картинку 2">
+                                                    <attributes>
+                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <font key="NSFont" metaFont="system" size="33"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ChooseBtnTwoTapped:" destination="IFG-K5-uCM" eventType="touchUpInside" id="RG5-1D-amw"/>
+                                            <segue destination="1bE-iH-2TX" kind="show" identifier="image2" id="yQA-Hr-UGq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="center" horizontalCompressionResistancePriority="200" verticalCompressionResistancePriority="200" restorationIdentifier="showImage3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="muO-Lf-qTa">
+                                        <rect key="frame" x="46" y="240" width="322" height="100"/>
+                                        <color key="backgroundColor" systemColor="separatorColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="showImage"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="3iV-fm-TEp"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Op4-7b-ERS"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.57859861040000005" green="0.24876717109999999" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Загрузить картинку 3">
+                                                    <attributes>
+                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <font key="NSFont" metaFont="system" size="33"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ChooseBtnTreeTapped:" destination="IFG-K5-uCM" eventType="touchUpInside" id="q1K-Ie-NG3"/>
+                                            <segue destination="1bE-iH-2TX" kind="show" identifier="image3" id="DbY-PS-0Mc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="muO-Lf-qTa" firstAttribute="top" secondItem="E9J-BS-r7D" secondAttribute="bottom" constant="20" id="YgK-97-8wa"/>
+                                    <constraint firstItem="E9J-BS-r7D" firstAttribute="top" secondItem="RL8-hf-YIA" secondAttribute="bottom" constant="20" id="Zbk-0a-f3Z"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DBw-z3-iu6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="RL8-hf-YIA" firstAttribute="leading" secondItem="DBw-z3-iu6" secondAttribute="leading" id="2bo-Nj-UEJ"/>
-                            <constraint firstItem="DBw-z3-iu6" firstAttribute="trailing" secondItem="RL8-hf-YIA" secondAttribute="trailing" id="Jgw-Id-4t2"/>
-                            <constraint firstItem="RL8-hf-YIA" firstAttribute="top" secondItem="DBw-z3-iu6" secondAttribute="top" id="Sn5-am-Sqb"/>
+                            <constraint firstItem="OTG-xJ-aFX" firstAttribute="leading" secondItem="DBw-z3-iu6" secondAttribute="leading" id="25z-83-PWe"/>
+                            <constraint firstItem="OTG-xJ-aFX" firstAttribute="leading" secondItem="DBw-z3-iu6" secondAttribute="leading" id="P0Z-xt-l9J"/>
+                            <constraint firstItem="OTG-xJ-aFX" firstAttribute="top" secondItem="DBw-z3-iu6" secondAttribute="top" id="vBt-Gg-AhL"/>
+                            <constraint firstItem="OTG-xJ-aFX" firstAttribute="trailing" secondItem="DBw-z3-iu6" secondAttribute="trailing" id="vfR-HO-UXA"/>
+                            <constraint firstItem="DBw-z3-iu6" firstAttribute="top" relation="lessThanOrEqual" secondItem="OTG-xJ-aFX" secondAttribute="top" id="x4x-3S-8vf"/>
+                            <constraint firstItem="DBw-z3-iu6" firstAttribute="trailing" secondItem="OTG-xJ-aFX" secondAttribute="trailing" id="z0f-d7-TCz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FTn-fi-2jz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abm-Rp-0BF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2764" y="537"/>
+            <point key="canvasLocation" x="-2765.217391304348" y="536.38392857142856"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="HAd-jF-G3b">
@@ -79,7 +153,13 @@
             <point key="canvasLocation" x="-1820.289855072464" y="537.72321428571422"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="DbY-PS-0Mc"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
