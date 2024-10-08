@@ -10,11 +10,21 @@ class ImageChooserViewController: UIViewController {
         "image2": URL(string: "https://example.com/image2.jpg")!
     ]
 
-    @IBAction func chooseImageButtonTapped(_ sender: UIButton) {
+    @IBAction func ChooseBtnTapped(_ sender: Any) {
         let selectedIdentifier = "image1"
         selectedImageURL = imageURLs[selectedIdentifier]
         
         performSegue(withIdentifier: "unwindToImageViewController", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("prepare")
+        if segue.identifier == "unwindToImageViewController", let vc =
+            segue.destination as? ImageViewController {
+                let selectedIdentifier = "image1"
+                selectedImageURL = imageURLs[selectedIdentifier]
+                vc.imageURL = selectedImageURL
+        }
     }
 
 }
