@@ -24,22 +24,12 @@ class ImageChooserViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "image1", let vc =
-            segue.destination as? ImageViewController {
-                let selectedIdentifier = "image1"
-                selectedImageURL = imageURLs[selectedIdentifier]
-                vc.imageURL = selectedImageURL
-        } else if segue.identifier == "image2", let vc =
-            segue.destination as? ImageViewController {
-                let selectedIdentifier = "image2"
-                selectedImageURL = imageURLs[selectedIdentifier]
-                vc.imageURL = selectedImageURL
-        } else if segue.identifier == "image3", let vc =
-            segue.destination as? ImageViewController {
-                let selectedIdentifier = "image3"
-                selectedImageURL = imageURLs[selectedIdentifier]
-                vc.imageURL = selectedImageURL
-        }
+        if let vc = segue.destination as? ImageViewController,
+           let identifier = segue.identifier,
+                imageURLs.keys.contains(identifier) {
+                    selectedImageURL = imageURLs[identifier]
+                    vc.imageURL = selectedImageURL
+            }
     }
 
 }
