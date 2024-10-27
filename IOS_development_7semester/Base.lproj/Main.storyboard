@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="top" axis="vertical" distribution="equalSpacing" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="OTG-xJ-aFX">
-                                <rect key="frame" x="0.0" y="88" width="414" height="340"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="460"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="center" horizontalCompressionResistancePriority="200" verticalCompressionResistancePriority="200" restorationIdentifier="showImage1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RL8-hf-YIA">
-                                        <rect key="frame" x="48.5" y="0.0" width="317" height="100"/>
+                                        <rect key="frame" x="125.5" y="0.0" width="163" height="100"/>
                                         <color key="backgroundColor" systemColor="separatorColor"/>
                                         <accessibility key="accessibilityConfiguration" identifier="showImage"/>
                                         <constraints>
@@ -30,10 +30,11 @@
                                         <color key="tintColor" red="0.57859861040000005" green="0.24876717109999999" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="Загрузить картинку 1">
+                                                <fragment content="Картинка 1">
                                                     <attributes>
                                                         <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <font key="NSFont" metaFont="system" size="33"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -45,7 +46,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="center" horizontalCompressionResistancePriority="200" verticalCompressionResistancePriority="200" restorationIdentifier="showImage2" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E9J-BS-r7D">
-                                        <rect key="frame" x="46.5" y="120" width="321" height="100"/>
+                                        <rect key="frame" x="119.5" y="120" width="175" height="100"/>
                                         <color key="backgroundColor" systemColor="separatorColor"/>
                                         <accessibility key="accessibilityConfiguration" identifier="showImage"/>
                                         <constraints>
@@ -55,10 +56,11 @@
                                         <color key="tintColor" red="0.57859861040000005" green="0.24876717109999999" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="Загрузить картинку 2">
+                                                <fragment content="Картинка 2">
                                                     <attributes>
                                                         <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <font key="NSFont" metaFont="system" size="33"/>
+                                                        <font key="NSFont" size="33" name="HelveticaNeue"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -70,7 +72,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="center" horizontalCompressionResistancePriority="200" verticalCompressionResistancePriority="200" restorationIdentifier="showImage3" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="muO-Lf-qTa">
-                                        <rect key="frame" x="46" y="240" width="322" height="100"/>
+                                        <rect key="frame" x="119.5" y="240" width="175" height="100"/>
                                         <color key="backgroundColor" systemColor="separatorColor"/>
                                         <accessibility key="accessibilityConfiguration" identifier="showImage"/>
                                         <constraints>
@@ -80,10 +82,11 @@
                                         <color key="tintColor" red="0.57859861040000005" green="0.24876717109999999" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
-                                                <fragment content="Загрузить картинку 3">
+                                                <fragment content="Картинка 3">
                                                     <attributes>
                                                         <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <font key="NSFont" metaFont="system" size="33"/>
+                                                        <font key="NSFont" size="33" name="HelveticaNeue"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
@@ -92,6 +95,32 @@
                                         <connections>
                                             <action selector="ChooseBtnTreeTapped:" destination="IFG-K5-uCM" eventType="touchUpInside" id="q1K-Ie-NG3"/>
                                             <segue destination="1bE-iH-2TX" kind="show" identifier="image3" id="DbY-PS-0Mc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="center" horizontalCompressionResistancePriority="200" verticalCompressionResistancePriority="200" restorationIdentifier="showDragAndDropZone" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8gw-ec-zbX">
+                                        <rect key="frame" x="93.5" y="360" width="227" height="100"/>
+                                        <color key="backgroundColor" systemColor="separatorColor"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="showImage"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="bO1-70-KUW"/>
+                                            <constraint firstAttribute="height" constant="100" id="eve-oR-MZo"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.57859861040000005" green="0.24876717109999999" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="drag&amp;drop zone">
+                                                    <attributes>
+                                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <font key="NSFont" metaFont="system" size="33"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="ChooseBtnFourTapped:" destination="IFG-K5-uCM" eventType="touchUpInside" id="AfY-CK-S5A"/>
+                                            <segue destination="uG0-QD-Kwj" kind="show" identifier="dragAndDrop" id="OsE-HG-LcB"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -117,6 +146,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abm-Rp-0BF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2765.217391304348" y="536.38392857142856"/>
+        </scene>
+        <!--Drag And Drop View Controller-->
+        <scene sceneID="yJW-Kf-YGH">
+            <objects>
+                <viewController id="uG0-QD-Kwj" customClass="DragAndDropViewController" customModule="IOS_development_7semester" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Wr-3c-FZc" customClass="DragAnd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="op9-6l-w6J"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lN7-OV-HSD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="90w-FK-m3K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2765" y="1256"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="HAd-jF-G3b">

@@ -23,6 +23,10 @@ class ImageChooserViewController: UIViewController {
         performSegue(withIdentifier: "image3", sender: self)
     }
     
+    @IBAction func ChooseBtnFourTapped(_ sender: Any) {
+        performSegue(withIdentifier: "dragAndDrop", sender: self)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? ImageViewController,
            let identifier = segue.identifier,
