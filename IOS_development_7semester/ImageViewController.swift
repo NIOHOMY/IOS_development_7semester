@@ -45,6 +45,19 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         if imageURL == nil {
             imageURL = URL(string: "https://media.istockphoto.com/id/506470828/photo/taking-picture.jpg?s=170667a&w=0&k=20&c=MWyWduuMfAXmqG7SBDco0Q-Gl1tEHS7_DupqyqmvEKE=")
         }
+        
+        let backButton = UIBarButtonItem(title: "Назад", style: .plain, target: self, action: #selector(backButtonTapped))
+        self.navigationItem.leftBarButtonItem = backButton
+    }
+    
+    @objc func backButtonTapped() {
+        if let viewControllers = navigationController?.viewControllers {
+            if viewControllers.count >= 3 {
+                navigationController?.popToViewController(viewControllers[viewControllers.count - 3], animated: true)
+            } else {
+                navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
