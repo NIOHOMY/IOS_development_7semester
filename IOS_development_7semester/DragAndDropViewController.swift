@@ -30,10 +30,10 @@ class DragAndDropViewController: UIViewController, UIDropInteractionDelegate {
     @IBOutlet weak var imageCardView: ImageViewCardController!
     
     func dropInteraction(_ interaction: UIDropInteraction, canHandle session: UIDropSession) -> Bool {
-        return session.canLoadObjects(ofClass: UIImage.self) || session.canLoadObjects(ofClass: NSURL.self)
+        return session.canLoadObjects(ofClass: UIImage.self) && session.canLoadObjects(ofClass: NSURL.self)
     }
     
-    func dropInteraction(_ interaction: UIDropInteraction, canHandle session: UIDropSession) -> UIDropProposal {
+    func dropInteraction(_ interaction: UIDropInteraction, sessionDidUpdate session: UIDropSession) -> UIDropProposal {
         return UIDropProposal(operation:  .copy)
     }
     
