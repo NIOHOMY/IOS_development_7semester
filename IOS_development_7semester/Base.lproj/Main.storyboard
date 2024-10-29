@@ -158,17 +158,50 @@
                             <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahm-LO-6cv">
                                 <rect key="frame" x="0.0" y="50" width="810" height="1030"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WoB-Dy-br4" customClass="ImageViewCardController" customModule="IOS_development_7semester" customModuleProvider="target">
+                                    <stackView opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="4o1-jZ-QKX">
                                         <rect key="frame" x="8" y="8" width="794" height="1014"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WoB-Dy-br4" customClass="ImageViewCardController" customModule="IOS_development_7semester" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="794" height="300"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="zxN-cp-yHZ"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACG-bM-mph">
+                                                <rect key="frame" x="0.0" y="338" width="794" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="tWK-or-P6X"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="37e-w3-Txr" customClass="ImageViewCardController" customModule="IOS_development_7semester" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="526" width="794" height="300"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="9jE-Ay-vL5"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ty-17-EfP">
+                                                <rect key="frame" x="0.0" y="864" width="794" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="TCY-oy-TBf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="WoB-Dy-br4" firstAttribute="top" secondItem="ahm-LO-6cv" secondAttribute="topMargin" id="DQ4-Ok-bKY"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="WoB-Dy-br4" secondAttribute="trailing" id="Fpk-Qa-lN8"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="WoB-Dy-br4" secondAttribute="bottom" id="OT4-fx-IzE"/>
-                                    <constraint firstItem="WoB-Dy-br4" firstAttribute="leading" secondItem="ahm-LO-6cv" secondAttribute="leadingMargin" id="syx-aI-3xd"/>
+                                    <constraint firstItem="4o1-jZ-QKX" firstAttribute="top" secondItem="ahm-LO-6cv" secondAttribute="top" constant="8" id="Irf-1d-gaN"/>
+                                    <constraint firstAttribute="bottom" secondItem="4o1-jZ-QKX" secondAttribute="bottom" constant="8" id="jku-34-ncg"/>
+                                    <constraint firstItem="4o1-jZ-QKX" firstAttribute="leading" secondItem="ahm-LO-6cv" secondAttribute="leading" constant="8" id="usX-Fc-0gH"/>
+                                    <constraint firstAttribute="trailing" secondItem="4o1-jZ-QKX" secondAttribute="trailing" constant="8" id="xZu-ux-GOX"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -185,11 +218,14 @@
                     <connections>
                         <outlet property="dropZone" destination="ahm-LO-6cv" id="B8M-v6-2hy"/>
                         <outlet property="imageCardView" destination="WoB-Dy-br4" id="1P6-0F-Btt"/>
+                        <outlet property="imageCardView2" destination="37e-w3-Txr" id="LbT-pg-INH"/>
+                        <outlet property="label" destination="ACG-bM-mph" id="Jmn-36-44y"/>
+                        <outlet property="label2" destination="2ty-17-EfP" id="Fc5-eZ-JEv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="90w-FK-m3K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2765" y="1256"/>
+            <point key="canvasLocation" x="-2765.1851851851852" y="1255.5555555555554"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="HAd-jF-G3b">
