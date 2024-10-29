@@ -33,7 +33,8 @@ class DragAndDropViewController: UIViewController, UIDropInteractionDelegate {
     @IBOutlet weak var label2: UILabel!
     
     func dropInteraction(_ interaction: UIDropInteraction, canHandle session: UIDropSession) -> Bool {
-        return session.canLoadObjects(ofClass: UIImage.self) && session.canLoadObjects(ofClass: NSURL.self)
+        return (session.canLoadObjects(ofClass: UIImage.self) && session.canLoadObjects(ofClass: NSURL.self)) ||
+            session.canLoadObjects(ofClass: NSAttributedString.self)
     }
     
     func dropInteraction(_ interaction: UIDropInteraction, sessionDidUpdate session: UIDropSession) -> UIDropProposal {
@@ -45,16 +46,15 @@ class DragAndDropViewController: UIViewController, UIDropInteractionDelegate {
             DispatchQueue.main.async {
                 if self.imageCardView.image == nil {
                     self.imageCardView.image = image
-                    self.label.text = url.absoluteString
                 } else if self.imageCardView2.image == nil {
                     self.imageCardView2.image = image
-                    self.label2.text = url.absoluteString
                 }
             }
         }
         
-        session.loadObjects(ofClass: NSString.self) { strings in
-            if let text = strings.first as? String {
+        session.loadObjects(ofClass: NSAttributedString.self) { attributedStrings in
+            if let attributedString = attributedStrings.first as? NSAttributedString {
+                let text = attributedString.string
                 DispatchQueue.main.async {
                     if self.label.text == nil || self.label.text == "" {
                         self.label.text = text
