@@ -20,8 +20,10 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         }
         set {
             imageView.image = newValue
+            imageView.contentMode = .scaleAspectFit
             imageView.sizeToFit()
-            scrollView.contentSize = imageView.frame.size
+            
+            updateScrollView()
         }
     }
     
@@ -90,6 +92,20 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         descriptionLabel.text = curimageDescription
     }
     
+    func updateScrollView() {
+        guard let image = imageView.image else { return }
+        
+        let imageSize = image.size
+        let scrollViewSize = scrollView.bounds.size
 
+        let minScale = min(scrollViewSize.width / imageSize.width, scrollViewSize.height / imageSize.height)
+        let maxScale: CGFloat = 3.0  
+
+        scrollView.minimumZoomScale = minScale
+        scrollView.maximumZoomScale = maxScale
+
+        scrollView.contentSize = imageSize
+        scrollView.setZoomScale(minScale, animated: false)
+    }
     
 }
