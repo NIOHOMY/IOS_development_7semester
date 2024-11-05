@@ -33,19 +33,14 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    var imageDescription: String? {
-        didSet {
-            if view.window != nil {
-                descriptionLabel.text = imageDescription
-            }
-        }
-    }
+    var imageDescription: String?
     @IBOutlet weak var descriptionLabel: UILabel!
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if view.window != nil {
             fetchImage()
+            loadDescription()
         }
     }
     
@@ -89,7 +84,11 @@ class ImageViewController: UIViewController, UIScrollViewDelegate {
         }
     }
 
-    
+    func loadDescription() {
+        guard let curimageDescription = imageDescription else { return }
+        print("Loading image description: \(curimageDescription)")
+        descriptionLabel.text = curimageDescription
+    }
     
 
     
