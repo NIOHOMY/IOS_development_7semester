@@ -16,6 +16,7 @@
 		494A4FB62CA332C900895DB6 /* pigeon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 494A4FB52CA332C900895DB6 /* pigeon.jpg */; };
 		494C5D552CAC5DF00083D2A2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 494C5D542CAC5DF00083D2A2 /* Alamofire */; };
 		494C5D582CAC67410083D2A2 /* ImageChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494C5D572CAC67410083D2A2 /* ImageChooserViewController.swift */; };
+		498089B42CDA908000DD3E84 /* ImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498089B32CDA908000DD3E84 /* ImageItem.swift */; };
 		49DD747B2CCEAEEF006308A9 /* DragAndDropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD747A2CCEAEEF006308A9 /* DragAndDropViewController.swift */; };
 		49DD747E2CCEBE5F006308A9 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD747D2CCEBE5F006308A9 /* ImageFetcher.swift */; };
 		49DD74812CCEC114006308A9 /* ImageViewCardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD74802CCEC114006308A9 /* ImageViewCardController.swift */; };
@@ -32,6 +33,7 @@
 		494A4FAB2CA3226200895DB6 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		494A4FB52CA332C900895DB6 /* pigeon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pigeon.jpg; sourceTree = "<group>"; };
 		494C5D572CAC67410083D2A2 /* ImageChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageChooserViewController.swift; sourceTree = "<group>"; };
+		498089B32CDA908000DD3E84 /* ImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageItem.swift; sourceTree = "<group>"; };
 		49DD747A2CCEAEEF006308A9 /* DragAndDropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragAndDropViewController.swift; sourceTree = "<group>"; };
 		49DD747D2CCEBE5F006308A9 /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
 		49DD74802CCEC114006308A9 /* ImageViewCardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCardController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				494A4FA02CA31F7800895DB6 /* Info.plist */,
 				494A4FAB2CA3226200895DB6 /* ImageViewController.swift */,
 				494C5D572CAC67410083D2A2 /* ImageChooserViewController.swift */,
+				498089B32CDA908000DD3E84 /* ImageItem.swift */,
 			);
 			path = IOS_development_7semester;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				49DD74812CCEC114006308A9 /* ImageViewCardController.swift in Sources */,
 				494A4F932CA31F7500895DB6 /* AppDelegate.swift in Sources */,
 				494A4FAC2CA3226200895DB6 /* ImageViewController.swift in Sources */,
+				498089B42CDA908000DD3E84 /* ImageItem.swift in Sources */,
 				49DD747E2CCEBE5F006308A9 /* ImageFetcher.swift in Sources */,
 				49DD747B2CCEAEEF006308A9 /* DragAndDropViewController.swift in Sources */,
 				494A4F952CA31F7500895DB6 /* SceneDelegate.swift in Sources */,
